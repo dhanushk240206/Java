@@ -1,9 +1,9 @@
 package CIE;
 
 public class Student {
-    protected String usn;
-    protected String name;
-    protected int sem;
+    public String usn;
+    public String name;
+    public int sem;
 
     public Student(String usn, String name, int sem) {
         this.usn = usn;
@@ -69,7 +69,7 @@ public class Main {
 
         System.out.print("Enter the number of students: ");
         int n = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
 
         External[] students = new External[n];
         Internals[] internalsArray = new Internals[n];
@@ -94,7 +94,7 @@ public class Main {
             for (int j = 0; j < 5; j++) {
                 seeMarks[j] = scanner.nextInt();
             }
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();  
             students[i] = new External(usn, name, sem, seeMarks);
         }
 
@@ -113,7 +113,7 @@ public class Main {
     public static int[] calculateFinalMarks(int[] internalMarks, int[] seeMarks) {
         int[] finalMarks = new int[5];
         for (int i = 0; i < 5; i++) {
-            finalMarks[i] = internalMarks[i] + (seeMarks[i] / 2);  // Divide SEE marks by 2
+            finalMarks[i] = internalMarks[i] + (seeMarks[i] / 2);  
         }
         return finalMarks;
     }
