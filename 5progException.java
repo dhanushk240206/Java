@@ -1,3 +1,19 @@
+p-01
+class Main1{
+    public static void main(String[] args){
+        try{
+            int c=5/0;
+            System.out.println("rest of the code is try block");
+        }
+        catch (ArithmeticException e){
+            System.out.println("ArithmeticException => "+ e.getMessage());
+        }
+    }
+}
+
+
+
+p-02
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -38,10 +54,25 @@ public class CheckedExceptionDemo {
 }
 
 
+p-03
+import java.util.Scanner;
+public class RunTimeExceptionDemo {
+    public static void main(String[] args) {
+
+        Scanner inputDevice = new Scanner(System.in);
+        System.out.print("Please enter your age- Numeric value: "); 
+        int age = inputDevice.nextInt();
+        if (age>18){
+    
+        System.out.println("You are authorized to view the page");
+        }else {
+        System.out.println("You are not authorized to view page"); 
+        }
+    }
+}
 
 
-
-
+p-05
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -99,3 +130,50 @@ class InvalidUserInputException extends RuntimeException {
 }
 
 
+p-04
+ import java.io.*;
+ class GFG1{
+     public static void main(String[] args) {
+         int a=5;
+        int b=0;
+            try {
+            
+            System.out.println(a/b);
+            }
+            catch(ArithmeticException e) {
+             e.printStackTrace();
+            }
+     }
+ }
+ import java.io.*;
+ class GFG1 {
+    public static void main(String[] args) {
+        int a=5;
+        int b=0;
+        
+        try{
+            System.out.println(a/b);
+        }
+       catch(ArithmeticException e) {
+       System.out.println(e.toString());
+        
+        }    
+        
+    }
+ }
+
+import java.io.*;
+class GFG1 {
+    public static void main(String[] args) {
+    int a=5;
+    int b=0;
+    try{
+        System.out.println(a/b);
+    }
+    
+    catch (ArithmeticException e) {
+  
+    System.out.println(e.getMessage());
+    }
+}
+  }     
